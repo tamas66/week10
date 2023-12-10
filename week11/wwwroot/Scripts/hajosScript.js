@@ -33,3 +33,27 @@ function kérdésMegjelenítés(kérdés) {
     document.getElementById("válasz3").innerText = kérdés.answer3
     document.getElementById("kép").src = "https://szoft1.comeback.hu/hajo/" + kérdés.image;
 }
+function előre() {
+    questionId++;
+    kérdésBetöltés(questionId)
+}
+
+function vissza() {
+    questionId--;
+    kérdésBetöltés(questionId)
+}
+window.onload = function (e) {
+    console.log("Oldal betöltve...");
+    document.getElementById("előre_gomb").onclick = előre;
+    document.getElementById("vissza_gomb").onclick = vissza;
+    kérdésBetöltés(questionId)
+}
+function választás(n) {
+    if (n != jóVálasz) {
+        document.getElementById(`válasz${n}`).classList.add("rossz");
+        document.getElementById(`válasz${jóVálasz}`).classList.add("jó");
+    }
+    else {
+        document.getElementById(`válasz${jóVálasz}`).classList.add("jó");
+    }
+}
