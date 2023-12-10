@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="wwwroot\Controllers\BoatController.cs" />
+    <Compile Include="wwwroot\Controllers\TesztController.cs" />
+    <Compile Include="wwwroot\Controllers\WeatherForecastController.cs" />
+    <Compile Include="wwwroot\hajosModels\HajosContext.cs" />
+    <Compile Include="wwwroot\hajosModels\Question.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Scripts\hajosScript.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
